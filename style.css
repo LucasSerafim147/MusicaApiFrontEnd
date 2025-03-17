@@ -1,0 +1,372 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --text-color: #333;
+  --background-color: #f8f9fa;
+  --success-color: #27ae60;
+  --danger-color: #e74c3c;
+  --warning-color: #f1c40f;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--background-color);
+  min-height: 100vh;
+  position: relative;
+}
+
+.container {
+  padding: 15px;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.music-form {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.music-form h2 {
+  color: var(--primary-color);
+  margin: 0 0 15px 0;
+  font-size: 1.2rem;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  color: var(--text-color);
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.form-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-size: 0.9rem;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.form-actions button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+#saveBtn {
+  background: var(--success-color);
+}
+
+.cancel-btn {
+  background: var(--danger-color);
+}
+
+.search-bar {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 15px 0;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+  outline: none;
+}
+
+.music-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.music-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.music-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.music-cover {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.music-info {
+  flex: 1;
+  text-align: center;
+}
+
+.music-info h3 {
+  margin: 0 0 6px 0;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.music-info p {
+  margin: 3px 0;
+  color: var(--text-color);
+  font-size: 0.85rem;
+}
+
+.music-info p:first-of-type {
+  color: #666;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+}
+
+.actions button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  font-size: 0.85rem;
+  transition: transform 0.2s;
+}
+
+.actions button:hover {
+  transform: translateY(-2px);
+}
+
+.edit-btn {
+  background: var(--warning-color);
+}
+
+.delete-btn {
+  background: var(--danger-color);
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+  justify-content: center;
+  padding: 10px 0;
+  background: var(--primary-color);
+  border-radius: 10px;
+  margin-top: 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 0.75rem;
+}
+
+.contact-link i {
+  font-size: 0.8rem;
+}
+
+.contact-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.logo-fixed {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  height: 30px;
+  z-index: 1000;
+}
+
+@media (min-width: 768px) {
+  .container {
+      max-width: 700px;
+      padding: 20px;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  .music-form {
+      padding: 20px;
+  }
+
+  .music-form h2 {
+      font-size: 1.5rem;
+  }
+
+  .form-group input {
+      padding: 12px;
+      font-size: 1rem;
+  }
+
+  .form-actions button {
+      padding: 10px 20px;
+      font-size: 1rem;
+  }
+
+  .search-bar {
+      padding: 15px 20px;
+      font-size: 1rem;
+  }
+
+  .music-container {
+      gap: 15px;
+  }
+
+  .music-item {
+      flex-direction: row;
+      padding: 15px;
+  }
+
+  .music-cover {
+      width: 80px;
+      height: 80px;
+  }
+
+  .music-info {
+      text-align: left;
+  }
+
+  .music-info h3 {
+      font-size: 1.2rem;
+  }
+
+  .music-info p {
+      font-size: 0.95rem;
+  }
+
+  .actions {
+      width: auto;
+      justify-content: flex-end;
+  }
+
+  .actions button {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+  }
+
+  .contact-links {
+      gap: 8px;
+      padding: 15px 0;
+  }
+
+  .contact-link {
+      padding: 6px 12px;
+      font-size: 0.9rem;
+  }
+
+  .contact-link i {
+      font-size: 1rem;
+  }
+
+  .logo-fixed {
+      top: 10px;
+      left: 10px;
+      height: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+      max-width: 900px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-links {
+      gap: 4px;
+      padding: 8px 0;
+  }
+
+  .contact-link {
+      padding: 3px 6px;
+      font-size: 0.7rem;
+  }
+
+  .contact-link i {
+      font-size: 0.75rem;
+  }
+
+  .contact-links::-webkit-scrollbar {
+      display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .contact-links {
+      gap: 3px;
+  }
+
+  .contact-link {
+      padding: 2px 5px;
+      font-size: 0.65rem;
+  }
+
+  .contact-link i {
+      font-size: 0.7rem;
+  }
+}
