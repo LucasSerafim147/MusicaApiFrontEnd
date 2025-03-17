@@ -1,0 +1,21 @@
+{
+    "name": "Gerenciador de Músicas",
+    "short_name": "Músicas",
+    "description": "Um gerenciador de músicas com API",
+    "start_url": "https://musica-api-front-end.vercel.app/",
+    "display": "standalone",
+    "background_color": "#f8f9fa",
+    "theme_color": "#2c3e50",
+    "icons": [
+      {
+        "src": "https://music-backend.vercel.app/icons/iloveyou-img-compressed.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "https://music-backend.vercel.app/icons/iloveyou-img-compressed.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
